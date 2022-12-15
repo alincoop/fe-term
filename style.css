@@ -1,0 +1,153 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+:root {
+    --primary: rgb(81, 118, 100);
+    --secondary: rgb(227, 233, 230);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+}
+
+div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+
+    font-family: "Roboto", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+input {
+    width: 103px;
+    border-radius: 2px;
+    border-style: solid;
+    border-color: lightgray;
+    border-width: 2px;
+
+    font-family: "Roboto", sans-serif;
+    font-size: 0.75rem;
+}
+
+label {
+    font-family: "Roboto", sans-serif;
+    font-size: 0.75rem;
+    color: lightgray;
+    margin-right: 2px;
+}
+
+p {
+    width: 115px;
+    border-radius: 2px;
+    border-style: solid;
+    border-color: lightgray;
+    padding: 8px;
+    height: 104px;
+    border-width: 2px;
+}
+
+.cardtitle {
+    margin-bottom: 8px;
+    color: #3D3D3D;
+}
+
+.main {
+        background-color: #f6f8f9;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 8px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.inner#left {
+    display:flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.inner#right {
+visibility: hidden; /*HIDDEN*/
+display:none; /*HIDDEN*/
+}
+
+.card {
+    background-color: white;
+    padding: 8px;
+    width: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 16px 0 rgb(87 114 127 / 24%), 0 0 1px 0 rgb(87 114 127 / 48%);
+}
+
+.preview {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.snippet {
+    height: 150px;
+}
+
+.term {
+  background: var(--secondary);
+  color: var(--primary);
+
+  border-radius: 2px;
+  border-style: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+
+  height: 1.375rem;
+  line-height: 1.375rem;
+  padding: 0 8px;
+  margin: 0 auto 0 0;
+  text-align: center;
+  position:relative;
+}
+
+.blueTerm {
+    background: rgb(217, 228, 251);
+    color: rgb(20, 88, 233);
+}
+
+.customTerm {
+    background: var(--secondary);
+    color: var(--primary);
+}
+
+.label {
+    max-width: 200px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
+    font-family: "Roboto", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.blueTerm:hover {
+    background: rgb(20, 88, 233);
+    color:white;
+}
+
+.customTerm:hover {
+    background: var(--primary);
+    color: white;
+}

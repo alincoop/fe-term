@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glossary Term Preview</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="inner" id="left">
+                <div class="input card">
+                    <div>
+                        <div class="cardtitle">Colour Code (Hex):</div>
+                    </div>
+                    <div>
+                        <form>
+                            <label>#</label>
+                            <input id="hexcode" type="text">
+                        </form>
+                    </div>
+                </div>
+                <div class="preview card">
+                    <div class="term blueTerm">
+                        <div class="label">[USA] City</div>
+                    </div>
+                    <div class="term blueTerm">
+                        <div class="label">ISO-2 Country Code</div>
+                    </div>
+                    <div class="term customTerm">
+                        <div class="label">Custom Term</div>
+                    </div>
+                </div>
+            </div>
+            <div class="inner" id="right">
+                <div class="snippet card">
+                    <div class="cardtitle">Trait Snippet ❐</div>
+                    <div class="codeblock">
+                        <p>fe:term
+                            <br><br>{
+                            <br>&emsp; "color": "#1458E9"
+                            <br>}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
