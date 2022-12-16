@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500|Roboto+Mono:500);
 
 :root {
     --primary: rgb(81, 118, 100);
@@ -24,6 +24,36 @@ div {
     font-weight: 500;
 }
 
+textarea {
+    margin: 0;
+    padding: 8px;
+    border-radius: 2px;
+    border-style: solid;
+    border-color: lightgray;
+    border-width: 2px;
+    text-decoration: none;
+    resize: none;
+    height: 107px;
+
+    font-family: "Roboto", sans-serif;
+    font-size: 0.75rem;
+}
+
+textarea:hover, input:hover {
+    border-radius: 2px;
+    border-style: solid;
+    border-color: #5e35b1;
+    border-width: 2px;
+}
+
+textarea:focus, input:focus {
+    outline:none;
+    border-radius: 2px;
+    border-style: solid;
+    border-color: #d00270;
+    border-width: 2px;
+}
+
 input {
     width: 103px;
     border-radius: 2px;
@@ -43,13 +73,18 @@ label {
 }
 
 p {
-    width: 115px;
+    width: 150px;
     border-radius: 2px;
     border-style: solid;
     border-color: lightgray;
     padding: 8px;
-    height: 104px;
+    margin: 0;
+    height: 106px;
     border-width: 2px;
+
+    font-family: "Roboto Mono", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
 }
 
 .cardtitle {
@@ -80,11 +115,6 @@ p {
     gap: 8px;
 }
 
-.inner#right {
-visibility: hidden; /*HIDDEN*/
-display:none; /*HIDDEN*/
-}
-
 .card {
     background-color: white;
     padding: 8px;
@@ -100,7 +130,7 @@ display:none; /*HIDDEN*/
 }
 
 .snippet {
-    height: 150px;
+    height: 149px;
 }
 
 .term {

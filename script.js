@@ -11,6 +11,8 @@ const inputHandler = function(e) {
     console.log(rgba);
 
     r.style.setProperty('--secondary', rgba);
+
+    document.getElementById("snippet").innerHTML = '\{\n\t\"color\"\: \"#' + document.getElementById("hexcode").value + '\" \n\}';
 }
 
 function hexToRgb(hex) {
@@ -28,6 +30,15 @@ function hexToRgb(hex) {
     } : null;
   }
 
+  function copySnippet() {
+    var copyText = document.getElementById("snippet");
+    copyText.select();
+    navigator.clipboard.writeText(copyText.value);
+
+    document.getElementById("snippet").innerHTML = "Copied to clipboard";
+  }
+
+document.getElementById("snippet").addEventListener("click", copySnippet);
 source.addEventListener('input', inputHandler);
 source.addEventListener('propertychange', inputHandler); // for IE8
 // Firefox/Edge18-/IE9+ don’t fire on <select><option>
