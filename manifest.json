@@ -1,0 +1,11 @@
+{
+    "name": "Glossary Term Preview",
+    "version": "1.0.0",
+    "description": "Extension to preview term tag colours",
+    "manifest_version": 3,
+    "author": "Alin Coop",
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "Glossary Term Preview"
+    }
+}
