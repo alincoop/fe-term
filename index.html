@@ -1,49 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Glossary Term Preview</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css?family=Roboto:400,500|Roboto+Mono:500" rel="stylesheet">
-</head>
-<body>
-    <div class="main">
-        <div class="container">
-            <div class="inner" id="left">
-                <div class="input card">
-                    <div>
-                        <div class="cardtitle">Colour Code (Hex):</div>
-                    </div>
-                    <div>
-                        <form>
-                            <label>#</label>
-                            <input id="hexcode" type="text">
-                        </form>
-                    </div>
-                </div>
-                <div class="preview card">
-                    <div class="term blueTerm">
-                        <div class="label">[USA] City</div>
-                    </div>
-                    <div class="term blueTerm">
-                        <div class="label">ISO-2 Country Code</div>
-                    </div>
-                    <div class="term customTerm">
-                        <div class="label">Custom Term</div>
-                    </div>
-                </div>
-            </div>
-            <div class="inner" id="right">
-                <div class="snippet card">
-                    <div class="cardtitle">fe:term</div>
-                    <textarea id="snippet" class="codeblock" readonly></textarea>
-                </div>
-            </div>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,500|Roboto+Mono:500"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Term color preview</h1>
+      <div class="input card">
+        <div>
+          <div class="cardtitle">Color</div>
         </div>
+        <div class="colorcontainer">
+          <span class="hexcaption" id="hexcaption">#1458e9</span>
+          <input type="color" id="hexcode" name="hexcode" value="#1458e9" />
+        </div>
+      </div>
+      <div class="preview card">
+        <div class="cardtitle">Preview</div>
+        <div class="preview">
+          <div class="term blueTerm">
+            <div class="label">[USA] City</div>
+          </div>
+          <div class="term blueTerm">
+            <div class="label">ISO-2 Country Code</div>
+          </div>
+          <div class="term customTerm">
+            <div class="label">Custom Term</div>
+          </div>
+        </div>
+      </div>
+      <div class="buttonContainer">
+        <button type="button" id="copyButton">
+          Copy snippet<span class="copyicon">⧉</span>
+        </button>
+      </div>
     </div>
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

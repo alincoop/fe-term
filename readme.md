@@ -4,15 +4,11 @@
 
 This is a tool for picking a colour for use in Ataccama ONE term entities.
 
-Inputting a colour code will provide a live preview of the entity trait fe:term, including hover effect.
+Selecting a colour will provide a live preview of the entity trait fe:term, including hover effect.
 
-A code snippet is also populated for your convenience.
+A code snippet is also provided for your convenience.
 
-## Installation
-
-Enable developer mode in Chrome extensions page, add unpackaged extension and enable.
-
-## Notes
+## Term styling notes
 
 - The muted background colour (estimate) is derived by taking the input as RGB and adding an alpha channel of value 0.16.
 - Font: Roboto, sans-serif
