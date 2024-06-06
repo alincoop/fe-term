@@ -71,10 +71,9 @@ label {
 .container {
   display: flex;
   flex-direction: column;
-  margin: 24px;
   max-width: 350px;
   gap: 16px;
-  margin: auto;
+  margin: 24px auto;
 }
 
 .colorcontainer {
