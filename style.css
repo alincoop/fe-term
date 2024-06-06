@@ -1,9 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500|Roboto+Mono:500);
 
 :root {
-  --primary: rgb(20, 88, 233);
-  --secondary: rgb(217, 228, 251);
-  --pink: #d6006d;
+  --primary: #d6006d;
+  --secondary: #fbdce7;
   --font-subheadline: 500 1.0625rem / 1.75rem Roboto, sans-serif;
   --font-body: 400 0.875rem / 1.25rem Roboto, sans-serif;
 }
@@ -141,8 +140,8 @@ label {
 }
 
 .customTerm {
-  background: #fbdce7;
-  color: #d6006d;
+  background: var(--secondary);
+  color: var(--primary);
 }
 
 .label {
