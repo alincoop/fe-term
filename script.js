@@ -41,7 +41,7 @@ function hexToRgb(hex) {
 
 function copySnippet() {
   var copyText =
-    '{\n    "color": "' + document.getElementById("hexcode").value + '" \n}';
+    '{\n    "color": "' + document.getElementById("hexcode").value + '"\n}';
   navigator.clipboard
     .writeText(copyText)
     .then(function () {
@@ -55,22 +55,12 @@ function copySnippet() {
 
 function showTooltip(message) {
   var tooltip = document.createElement("div");
+  tooltip.className = "tooltip";
   tooltip.innerText = message;
-  tooltip.style.position = "fixed";
-  tooltip.style.top = "24px";
-  tooltip.style.right = "24px";
-  tooltip.style.padding = "16px 24px";
-  tooltip.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
-  tooltip.style.color = "white";
-  tooltip.style.zIndex = "1000";
-  tooltip.style.fontSize = "14px";
-  tooltip.style.borderRadius = "4px";
-
   document.body.appendChild(tooltip);
-
   setTimeout(function () {
     tooltip.remove();
-  }, 1000); // Remove tooltip after 1 seconds
+  }, 1000);
 }
 
 document.getElementById("copyButton").addEventListener("click", copySnippet);
