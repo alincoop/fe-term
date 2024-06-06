@@ -8,7 +8,7 @@ Selecting a colour will provide a live preview of the entity trait fe:term, incl
 
 A code snippet is also provided for your convenience.
 
-<img src="fe-term.jpg" width="300">
+<img src="fe-term.jpg" width="350">
 
 ## Term styling notes
 
