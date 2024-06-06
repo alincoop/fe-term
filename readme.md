@@ -8,6 +8,10 @@ Selecting a colour will provide a live preview of the entity trait fe:term, incl
 
 A code snippet is also provided for your convenience.
 
+## Screenshot
+
+![Glossary term preview](fe-term.jpg)
+
 ## Term styling notes
 
 - The muted background colour (estimate) is derived by taking the input as RGB and adding an alpha channel of value 0.16.
