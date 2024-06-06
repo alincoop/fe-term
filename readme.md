@@ -4,9 +4,9 @@
 
 This is a tool for picking a colour for use in Ataccama ONE term entities.
 
-Selecting a colour will provide a live preview of the entity trait fe:term, including hover effect.
+Selecting a colour will provide a live preview of the entity trait `fe:term`, including hover effect.
 
-A code snippet is also provided for your convenience.
+A JSON snippet is also provided for your convenience.
 
 <img src="fe-term.jpg" width="350">
 
