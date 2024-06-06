@@ -8,9 +8,7 @@ Selecting a colour will provide a live preview of the entity trait fe:term, incl
 
 A code snippet is also provided for your convenience.
 
-## Screenshot
-
-![Glossary term preview](fe-term.jpg)
+![Glossary term preview](fe-term.jpg | width=300)
 
 ## Term styling notes
 
