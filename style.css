@@ -71,9 +71,8 @@ label {
 .container {
   display: flex;
   flex-direction: column;
-  padding: 24px;
-  width: 70vw;
-  max-width: 300px;
+  margin: 24px;
+  max-width: 350px;
   gap: 16px;
   margin: auto;
 }
@@ -106,6 +105,7 @@ label {
   background-color: #ffffff;
   padding: 24px;
   width: 100%;
+  max-width: 302px;
   border-radius: 4px;
   box-shadow: 0 4px 4px 0px color-mix(in lch, #57727f 8%, transparent),
     0 0 1px 0 color-mix(in lch, #57727f 24%, transparent);
