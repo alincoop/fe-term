@@ -54,16 +54,79 @@ function copySnippet() {
 }
 
 function showTooltip(message) {
+  var span = document.getElementById("hexcaption");
+  var parent = span.parentElement;
   var tooltip = document.createElement("div");
   tooltip.className = "tooltip";
   tooltip.innerText = message;
-  document.body.appendChild(tooltip);
+
+  // Append tooltip to the button's parent element
+  parent.appendChild(tooltip);
+
+  // Position the tooltip relative to the button
+  // var buttonRect = button.getBoundingClientRect();
+  // var tooltipRect = tooltip.getBoundingClientRect();
+
+  // tooltip.style.position = "absolute";
+  // tooltip.style.top =
+  //   buttonRect.top +
+  //   window.scrollY -
+  //   tooltipRect.height / 2 +
+  //   buttonRect.height / 2 +
+  //   "px";
+  // tooltip.style.left = buttonRect.right + window.scrollX + 8 + "px"; // Adjust 8px to move it to the right of the button
+
+  // Remove tooltip after 1 second
   setTimeout(function () {
-    tooltip.remove();
+    if (tooltip && tooltip.parentElement) {
+      tooltip.parentElement.removeChild(tooltip);
+    }
   }, 1000);
 }
 
+function randomColor() {
+  // Function to generate a two-digit hex value
+  function randomHex() {
+    return Math.floor(Math.random() * 256)
+      .toString(16)
+      .padStart(2, "0");
+  }
+
+  // Array of the three color channels
+  let channels = ["00", "00", "00"];
+
+  // Determine the number of channels to set to '00'
+  const numZeroChannels = Math.floor(Math.random() * 2) + 1; // 1 or 2 channels
+
+  // Randomly select which channels will remain '00'
+  let zeroChannels = [];
+  while (zeroChannels.length < numZeroChannels) {
+    let index = Math.floor(Math.random() * 3);
+    if (!zeroChannels.includes(index)) {
+      zeroChannels.push(index);
+    }
+  }
+
+  // Fill in the remaining channels with random hex values
+  for (let i = 0; i < 3; i++) {
+    if (!zeroChannels.includes(i)) {
+      channels[i] = randomHex();
+    }
+  }
+
+  // Join the channels into a hex color string
+  let randColorHex = "#" + channels.join("");
+
+  console.log("Random color: " + randColorHex);
+
+  // Set the value of the input field and trigger the inputHandler
+  source.value = randColorHex;
+  source.dispatchEvent(new Event("input"));
+}
+
 document.getElementById("copyButton").addEventListener("click", copySnippet);
+document.getElementById("randomButton").addEventListener("click", randomColor);
+
 source.addEventListener("input", inputHandler);
 source.addEventListener("propertychange", inputHandler); // for IE8
 // Firefox/Edge18-/IE9+ don’t fire on <select><option>

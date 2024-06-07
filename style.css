@@ -166,6 +166,11 @@ label {
   color: white;
 }
 
+.buttonContainer {
+  display: flex;
+  gap: 8px;
+}
+
 button {
   display: inline-flex;
   padding: 16px;
@@ -196,15 +201,22 @@ button:hover {
 .copyicon {
   position: relative;
   top: 1px;
-  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  font-size: 1.25rem;
+  color: #36363a83;
+}
+
+.randomIcon {
+  position: relative;
+  top: -1px;
+  padding-right: 0.5rem;
   font-size: 1.25rem;
   color: #36363a83;
 }
 
 .tooltip {
-  position: fixed;
-  top: 24px;
-  right: 24px;
+  position: absolute;
+  margin-left: 80px;
   padding: 12px 16px;
   background-color: #1d1e20;
   box-shadow: color-mix(in lch, #57727f 24%, transparent);
@@ -212,6 +224,17 @@ button:hover {
   z-index: 1000;
   font-size: 14px;
   border-radius: 4px;
-  margin-left: 16px;
   font: 500 0.875rem / 1.25rem Roboto, sans-serif;
+}
+
+.tooltip::before {
+  content: "";
+  position: absolute;
+  left: -16px; /* Move it further left */
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent #1d1e20 transparent transparent;
+  z-index: 1001; /* Ensure it appears above other elements */
 }
