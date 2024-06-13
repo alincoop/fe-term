@@ -41,7 +41,7 @@ function hexToRgb(hex) {
 
 function copySnippet() {
   var copyText =
-    '{\n    "color": "' + document.getElementById("hexcode").value + '"\n}';
+    '{\n  "color": "' + document.getElementById("hexcode").value + '"\n}';
   navigator.clipboard
     .writeText(copyText)
     .then(function () {
